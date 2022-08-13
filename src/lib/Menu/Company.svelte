@@ -38,7 +38,7 @@
 	</div>
 	<div class="details">
 		<p class="name">{company.name}</p>
-		<p class="members">{formatCount(company.members)}</p>
+		<p class="members">{formatCount(company.members)} members</p>
 	</div>
 </a>
 

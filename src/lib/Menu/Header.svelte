@@ -1,12 +1,15 @@
 <script lang="ts">
+	import { clickOutside } from '../../utils/clickOutside';
 	export let companies: any[];
 	import Company from './Company.svelte';
 	$: showDropdown = false;
 	$: current = companies[0];
-
 	//Change the current company in the dropdown
 	const companyChange = (event: any) => {
 		current = event.detail;
+	};
+	const handleClickOutside = () => {
+		showDropdown = false;
 	};
 </script>
 
@@ -28,7 +31,13 @@
 			/>
 		</svg>
 	</div>
-	<div on:click={() => (showDropdown = !showDropdown)} class="dropdown {showDropdown ? 'active' : ''}">
+	<!--@ts-ignore-->
+	<div
+		use:clickOutside
+		on:click={() => (showDropdown = !showDropdown)}
+		on:click_outside = {()=>showDropdown = false}
+		class="dropdown {showDropdown ? 'active' : ''}"
+	>
 		{#each companies as company}
 			<Company on:changeCompany={companyChange} {company} isCurrent={false} />
 		{/each}
@@ -66,20 +75,20 @@
 		align-items: center;
 		padding-right: 20px;
 	}
-	.current:hover{
+	.current:hover {
 		background-color: var(--onSurface);
 		transition: all 0.2s ease-in-out;
 		border-radius: 7px;
 	}
 	@media only screen and (max-width: 1150px) {
-		.current svg{
+		.current svg {
 			display: none;
 		}
-		.current{
+		.current {
 			overflow: hidden;
 			padding: 0rem;
 		}
-		.dropdown{
+		.dropdown {
 			background-color: var(--onBackgroundLight);
 			width: auto;
 			padding: 5px;

@@ -4,7 +4,6 @@
 
 	const path = name.toLowerCase().replace(' ', '_');
 
-	
 	$: isActive = $page.routeId?.toString().split('/')[2] === path;
 
 	//Returns the link to navigate to when the option is clicked
@@ -91,6 +90,5 @@
 		.wrapper img {
 			margin-right: 0;
 		}
-
 	}
 </style>
