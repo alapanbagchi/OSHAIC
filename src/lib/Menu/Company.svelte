@@ -77,11 +77,14 @@
 		font-weight: 500;
 		font-size: 16px;
 		color: var(--text);
+		white-space: nowrap;
 	}
 	.members {
 		margin-top: 4px;
 		font-size: 14px;
 		opacity: 0.6;
+		white-space: nowrap;
+
 	}
 	@media only screen and (max-width: 1150px) {
 		.wrapper.current {
@@ -97,6 +100,24 @@
 			padding: 0;
 			width: 60px;
 			height: 50px;
+		}
+		.current {
+			padding: unset;
+		}
+	}
+	@media only screen and (max-width: 750px) {
+		.wrapper.current {
+			width: fit-content;
+			padding: 0;
+			width: fit-content;
+			min-height: unset;
+		}
+
+		.wrapper.current .logo {
+			margin-right: 15px;
+			padding: 0;
+			width: 40px;
+			height: 40px;
 		}
 		.current {
 			padding: unset;

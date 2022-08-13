@@ -1,31 +1,9 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
 	import Option from './Option.svelte';
 
-    //Menu Options
-	let options = ['Dashboard', 'Tasks', 'Automated Lessons', 'Management', 'Forms', 'Reports'];
-
-    //Companies to be passed as a prop to the Header component
-	let companies = [
-		{
-			id: 1,
-			name: 'Google LLC',
-			icon: 'google',
-			members: '4500'
-		},
-		{
-			id: 2,
-			name: 'Apple',
-			icon: 'apple',
-			members: '2352'
-		},
-		{
-			id: 3,
-			name: 'Microsoft',
-			icon: 'microsoft',
-			members: '3521'
-		}
-	];
+    export let companies: any[];
+    export let options:any[]
 </script>
 
 <div class="wrapper">

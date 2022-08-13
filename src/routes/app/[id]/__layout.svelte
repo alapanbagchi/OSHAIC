@@ -1,28 +1,64 @@
 <script>
+	import Header from '$lib/Menu/Header.svelte';
 	import MainMenu from '$lib/Menu/MainMenu.svelte';
+	//Menu Options
+	let options = ['Dashboard', 'Tasks', 'Automated Lessons', 'Management', 'Forms', 'Reports'];
+
+	//Companies to be passed as a prop to the Header component
+	let companies = [
+		{
+			id: 1,
+			name: 'Google LLC',
+			icon: 'google',
+			members: '4500'
+		},
+		{
+			id: 2,
+			name: 'Apple',
+			icon: 'apple',
+			members: '2352'
+		},
+		{
+			id: 3,
+			name: 'Microsoft',
+			icon: 'microsoft',
+			members: '3521'
+		}
+	];
 </script>
 
+<div class="header">
+</div>
 <div class="menu">
-	<MainMenu />
+	<MainMenu {companies} {options} />
 </div>
 
 <style>
+    .header{
+        display: none;
+    }
 	.menu {
 		width: 20%;
 		min-width: 300px;
 	}
-    @media only screen and (max-width: 1150px) {
-        .menu {
-            width: 90px;
-            min-width: unset;
+	@media only screen and (max-width: 1150px) {
+		.menu {
+			width: 90px;
+			min-width: unset;
+		}
+	}
+	@media only screen and (max-width: 750px) {
+		.menu {
+			width: 100%;
+			height: 90px;
+			position: absolute;
+			bottom: -10px;
+		}
+        .header{
+            display: flex;
+            height: 60px;
+            padding: 10px;
+            background-color: var(--surface);
         }
-    }
-    @media only screen and (max-width: 750px) {
-        .menu {
-            width: 100%;
-            height: 90px;
-            position: absolute;
-            bottom:-10px;
-        }
-    }
+	}
 </style>
