@@ -57,7 +57,7 @@
 		padding: 15px;
 	}
 	.current {
-		padding: 20px 15px;
+		padding: 20px 20px;
 	}
 	.wrapper:hover {
 		background-color: var(--onSurface);
