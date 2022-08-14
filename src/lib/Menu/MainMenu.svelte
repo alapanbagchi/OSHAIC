@@ -18,7 +18,9 @@
 	<div class="systemoptions">
 		<Option name="Settings" />
 		<Option name="Help" />
+		<Option name="Logout" />
 	</div>
+
 </div>
 
 <style>
@@ -39,9 +41,10 @@
 	}
 	.systemoptions {
 		position: absolute;
-		bottom: 0;
+		bottom: 20px;
 		width: calc(100% - 30px);
 	}
+
 	@media only screen and (max-width: 750px) {
 		.wrapper {
 			width: 100%;

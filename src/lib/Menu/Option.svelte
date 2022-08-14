@@ -75,9 +75,12 @@
 		.wrapper:hover .title {
 			display: flex;
 			background-color: var(--surface);
-			padding: 20px;
+			padding: 10px;
 			position: absolute;
 			left: 100px;
+			font-size: 14px;
+			border-radius: 7px;
+			white-space: nowrap;
 		}
 	}
 	@media only screen and (max-width: 750px) {

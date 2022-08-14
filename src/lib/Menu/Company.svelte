@@ -17,7 +17,7 @@
 		return link + '/dashboard';
 	};
 
-	//Dispatches an event to the parent component to change the current company in the dropdown 
+	//Dispatches an event to the parent component to change the current company in the dropdown
 	const changeCompany = () => {
 		dispatch('changeCompany', company);
 	};
@@ -49,7 +49,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		padding: 0 14px;
+		padding: 0 7px;
 	}
 	.wrapper:hover {
 		background-color: var(--onSurface);
@@ -57,13 +57,11 @@
 		border-radius: 7px;
 	}
 	.logo {
-		width: 40px;
-		height: 40px;
+		width: 45px;
+		height: 45px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--onSurface);
-		box-shadow: 0px 0px 0px 2px var(--surface), 0px 0px 0px 3px var(--border);
 		margin-right: 20px;
 		border-radius: 7px;
 	}
@@ -84,7 +82,6 @@
 		font-size: 14px;
 		opacity: 0.6;
 		white-space: nowrap;
-
 	}
 	@media only screen and (max-width: 1150px) {
 		.wrapper.current {
