@@ -13,7 +13,7 @@
 	};
 </script>
 
-<div use:clickOutside on:click_outside = {()=>showDropdown = false} class="wrapper">
+<div use:clickOutside on:click_outside={() => (showDropdown = false)} class="wrapper">
 	<div on:click={() => (showDropdown = !showDropdown)} class="current">
 		<Company isCurrent={true} company={current} />
 		<svg xmlns="http://www.w3.org/2000/svg" width="12.828" height="18" viewBox="0 0 12.828 18">
@@ -34,7 +34,6 @@
 	<!--@ts-ignore-->
 	<div
 		on:click={() => (showDropdown = !showDropdown)}
-		
 		class="dropdown {showDropdown ? 'active' : ''}"
 	>
 		{#each companies as company}
@@ -96,13 +95,13 @@
 		}
 	}
 	@media only screen and (max-width: 750px) {
-		.wrapper{
-			width:60px
+		.wrapper {
+			width: 60px;
 		}
-		.wrapper.current{
-			width:60px
+		.wrapper.current {
+			width: 60px;
 		}
-		.dropdown{
+		.dropdown {
 			top: 60px;
 			left: 0;
 			max-width: unset;

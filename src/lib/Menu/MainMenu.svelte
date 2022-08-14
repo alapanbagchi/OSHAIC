@@ -2,21 +2,23 @@
 	import Header from './Header.svelte';
 	import Option from './Option.svelte';
 
-    export let companies: any[];
-    export let options:any[]
+	export let companies: any[];
+	export let options: any[];
 </script>
 
 <div class="wrapper">
 	<div class="header">
 		<Header {companies} />
 	</div>
-	{#each options as option}
-		<Option name={option} />
-	{/each}
-    <div class="systemoptions">
+	<div class="useroptions">
+		{#each options as option}
+			<Option name={option} />
+		{/each}
+	</div>
+	<div class="systemoptions">
 		<Option name="Settings" />
 		<Option name="Help" />
-    </div>
+	</div>
 </div>
 
 <style>
@@ -28,26 +30,37 @@
 		width: 100%;
 		height: 100vh;
 		padding: 0 15px;
+		position: relative;
 	}
-    .systemoptions {
-        margin-top: 100%;
-    }
+	.useroptions {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.systemoptions {
+		position: absolute;
+		bottom: 0;
+		width: calc(100% - 30px);
+	}
 	@media only screen and (max-width: 750px) {
 		.wrapper {
 			width: 100%;
-            max-width: 100vw;
-            overflow: auto;
+			max-width: 100vw;
+			overflow: auto;
 			height: 80px;
 			display: flex;
 			align-items: center;
-            justify-content: flex-start;
+			justify-content: flex-start;
 		}
 		.header {
 			display: none;
 		}
-        .systemoptions{
-            display: flex;
-            margin-top: unset;
-        }
+		.useroptions {
+			flex-direction: row;
+		}
+		.systemoptions {
+			position: initial;
+			display: flex;
+		}
 	}
 </style>
