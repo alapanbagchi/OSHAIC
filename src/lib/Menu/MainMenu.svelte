@@ -58,10 +58,12 @@
 			display: none;
 		}
 		.useroptions {
+			width: fit-content;
 			flex-direction: row;
 			padding: 0 0;
 		}
 		.systemoptions {
+			width: fit-content;
 			position: initial;
 			display: flex;
 			padding: 0 0;
