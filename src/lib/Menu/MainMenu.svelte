@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import Option from './Option.svelte';
-
 	export let companies: any[];
 	export let options: any[];
 </script>
@@ -20,29 +19,29 @@
 		<Option name="Help" />
 		<Option name="Logout" />
 	</div>
-
 </div>
 
 <style>
 	.header {
-		padding: 20px 0;
+		padding: 0 0 25px 0;
 	}
 	.wrapper {
 		background-color: var(--surface);
 		width: 100%;
 		height: 100vh;
-		padding: 0 15px;
 		position: relative;
 	}
 	.useroptions {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		padding: 0 15px;
 	}
 	.systemoptions {
+		padding: 0 15px;
 		position: absolute;
 		bottom: 20px;
-		width: calc(100% - 30px);
+		width: 100%;
 	}
 
 	@media only screen and (max-width: 750px) {
@@ -53,17 +52,24 @@
 			height: 80px;
 			display: flex;
 			align-items: center;
-			justify-content: flex-start;
+			justify-content: center;
 		}
 		.header {
 			display: none;
 		}
 		.useroptions {
 			flex-direction: row;
+			padding: 0 0;
 		}
 		.systemoptions {
 			position: initial;
 			display: flex;
+			padding: 0 0;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.wrapper{
+			justify-content: flex-start;
 		}
 	}
 </style>

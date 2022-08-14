@@ -32,7 +32,11 @@
 	};
 </script>
 
-<a on:click={changeCompany} class="wrapper  {isCurrent ? 'current' : ''}" href={link()}>
+<a
+	on:click={changeCompany}
+	class="wrapper  {isCurrent ? 'current' : ''}"
+	href={!isCurrent ? link() : ''}
+>
 	<div class="logo">
 		<img src="/images/logo/{company.icon}.svg" alt="{company.name} logo" />
 	</div>
@@ -46,19 +50,21 @@
 	.wrapper {
 		width: 100%;
 		min-height: 70px;
+		height: 89px;
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		padding: 0 7px;
+		padding: 15px;
+	}
+	.current {
+		padding: 20px 15px;
 	}
 	.wrapper:hover {
 		background-color: var(--onSurface);
 		transition: all 0.2s ease-in-out;
-		border-radius: 7px;
 	}
 	.logo {
-		width: 45px;
-		height: 45px;
+		width: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -72,22 +78,23 @@
 	}
 
 	.name {
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 16px;
 		color: var(--text);
 		white-space: nowrap;
+		opacity: 0.9;
 	}
 	.members {
 		margin-top: 4px;
-		font-size: 14px;
-		opacity: 0.6;
+		font-size: 13px;
+		opacity: 0.5;
 		white-space: nowrap;
 	}
 	@media only screen and (max-width: 1150px) {
 		.wrapper.current {
 			padding: 0;
-			width: 60px;
-			min-height: unset;
+			width: 100%;
+			justify-content: center;
 		}
 		.current .details {
 			display: none;
@@ -104,20 +111,23 @@
 	}
 	@media only screen and (max-width: 750px) {
 		.wrapper.current {
-			width: fit-content;
+			width: 100%;
 			padding: 0;
 			width: fit-content;
 			min-height: unset;
 		}
 
 		.wrapper.current .logo {
-			margin-right: 15px;
+			margin-right: unset;
 			padding: 0;
 			width: 40px;
 			height: 40px;
 		}
-		.current {
+		.wrapper.current {
+			width: 100%;
+			height: 55px;
 			padding: unset;
 		}
+
 	}
 </style>

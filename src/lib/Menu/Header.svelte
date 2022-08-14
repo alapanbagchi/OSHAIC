@@ -8,9 +8,6 @@
 	const companyChange = (event: any) => {
 		current = event.detail;
 	};
-	const handleClickOutside = () => {
-		showDropdown = false;
-	};
 </script>
 
 <div use:clickOutside on:click_outside={() => (showDropdown = false)} class="wrapper">
@@ -22,9 +19,6 @@
 		class="dropdown {showDropdown ? 'active' : ''}"
 	>
 		{#each companies as company,i}
-			{#if i==5}
-				<div class="">HELLO</div>
-			{/if}
 			<Company on:changeCompany={companyChange} {company} isCurrent={false} />
 		{/each}
 	</div>
@@ -34,6 +28,7 @@
 	.wrapper {
 		width: 100%;
 		position: relative;
+		border-bottom: 1px solid var(--border);
 	}
 	.dropdown {
 		width: calc(20% - 30px);
@@ -76,11 +71,12 @@
 	}
 	@media only screen and (max-width: 750px) {
 		.wrapper {
-			width: 60px;
+			width: 100%;
+			border-bottom: none;
 		}
 
 		.dropdown {
-			top: 60px;
+			top: 80px;
 			left: 0;
 			max-width: unset;
 			width: calc(100vw - 20px);

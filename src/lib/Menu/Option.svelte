@@ -54,8 +54,8 @@
 	.active .title {
 		opacity: 1;
 	}
-	.wrapper:hover {
-		border: 1px solid var(--border);
+	.wrapper:hover:not(.active) {
+		background-color: var(--onSurface);
 		transition: all 0.2s ease-in-out;
 	}
 
