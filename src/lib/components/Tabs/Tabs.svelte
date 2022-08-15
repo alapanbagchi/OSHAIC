@@ -1,11 +1,21 @@
 <script lang="ts">
-	let options: string[] = ['Pending', 'Awaiting Review', 'Completed'];
+	import { createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
+
+	export let options: any[];
+	const changeCompany = (option:string) => {
+		dispatch('tab', option);
+	};
 	$: active = options[0];
+	const handleClick = (option:string) => {
+		active = option
+		changeCompany(option);
+	};
 </script>
 
 <div class="wrapper">
 	{#each options as option}
-		<div on:click={() => (active = option)} class="tab {active === option ? 'active' : ''}">
+		<div on:click={() => handleClick(option)} class="tab {active === option ? 'active' : ''}">
 			{option}
 		</div>
 	{/each}

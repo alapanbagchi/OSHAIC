@@ -34,6 +34,7 @@
 	</div>
 	<div class="content">
 		<Header {companies} />
+		<slot {companies} />
 	</div>
 </main>
 
@@ -50,7 +51,7 @@
 	}
 	.content {
 		width: 80%;
-		overflow: auto;
+		overflow: hidden;
 	}
 	@media only screen and (max-width: 1150px) {
 		.menu {

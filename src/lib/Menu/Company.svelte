@@ -49,8 +49,7 @@
 <style>
 	.wrapper {
 		width: 100%;
-		min-height: 70px;
-		height: 89px;
+		height: 80px;
 		display: flex;
 		align-items: center;
 		cursor: pointer;

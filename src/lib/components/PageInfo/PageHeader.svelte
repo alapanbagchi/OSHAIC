@@ -1,24 +1,34 @@
-<script>
+<script lang="ts">
 	import Tabs from '$lib/components/Tabs/Tabs.svelte';
-import Button from '../shared/Button.svelte';
+	import Button from '../shared/Button.svelte';
+
+	export let title: string;
+	export let buttons: any[] = [];
+	export let tabs: any[] = [];
 </script>
 
 <section>
 	<div class="header">
 		<div class="details">
-			<p class="title">Tasks & Projects</p>
+			<p class="title">{title}</p>
 		</div>
-		<Button icon="/icons/shared/plus.svg" title="Add Task"  />
+		{#if buttons.length > 0}
+			{#each buttons as button}
+				<Button icon={button.icon} title={button.title} />
+			{/each}
+		{/if}
 	</div>
-	<div class="tabs">
-		<Tabs />
-	</div>
+	{#if tabs.length > 0}
+		<div class="tabs">
+			<Tabs options={tabs} />
+		</div>
+	{/if}
 </section>
 
 <style>
 	section {
 		width: 100%;
-		height: 100vh;
+		height: fit-content;
 		overflow: auto;
 	}
 	.header {
@@ -31,5 +41,8 @@ import Button from '../shared/Button.svelte';
 		font-size: 30px;
 		font-weight: 500;
 		opacity: 0.9;
+	}
+	.tabs {
+		margin-top: 10px;
 	}
 </style>

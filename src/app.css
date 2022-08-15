@@ -8,9 +8,9 @@
 	--border: #333333;
 	--error: #CF6679;
 	--success: #21AB6C;
-	--primary: #2A6FF5;
-	--primaryHover: #2A6FF5;
-	--primaryActive: #3C45A5;
+	--primary: #5865f2;
+	--primaryHover: #404bc1;
+	--primaryActive: #373780;
 }
 
 * {
@@ -41,6 +41,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
+	display: none;
 	background-color: var(--primaryActive);
 	border-radius: 6px;
 	-webkit-border-radius: 6px;

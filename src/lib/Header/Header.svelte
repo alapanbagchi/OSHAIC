@@ -22,7 +22,7 @@
 <style>
 	.header {
 		width: 100%;
-		height: 90px;
+		height: 81px;
 		border-bottom: 1px solid var(--border);
 		display: flex;
 		align-items: center;
