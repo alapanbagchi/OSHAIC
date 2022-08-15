@@ -30,10 +30,11 @@
 		border: 3px solid var(--surface);
 		padding: 3px;
 		gap: 5px;
+		overflow: auto;
 	}
 
 	.tab {
-		width: fit-content;
+		width:fit-content;
 		height: fit-content;
 		padding: 10px;
 		font-size: 14px;
@@ -41,6 +42,7 @@
 		opacity: 0.5;
 		cursor: pointer;
 		position: relative;
+		white-space: nowrap;
 	}
 	.tab:hover:not(.active) {
 		background-color: var(--onBackground);
@@ -49,5 +51,10 @@
 	.active {
 		background-color: var(--onBackground);
 		opacity: 1;
+	}
+	@media screen and (max-width: 760px){
+		.wrapper{
+			width: calc(100vw - 40px);
+		}
 	}
 </style>

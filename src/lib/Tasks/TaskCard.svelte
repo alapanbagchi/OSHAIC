@@ -3,12 +3,9 @@
 	import Badge from '$lib/components/shared/Badge.svelte';
 	import { faker } from '@faker-js/faker';
 	let dummy = ['', '', '', '', '', ''];
-
-    let url = $page.url.pathname.split('/').slice
-    console.log(url)
+    
 </script>
 
-<a href="">
 	<div class="wrapper">
 		<div class="header">
 			<p class="title">Make a Design System</p>
@@ -35,7 +32,6 @@
 			</div>
 		</div>
 	</div>
-</a>
 
 <style>
 	.wrapper {
@@ -82,6 +78,7 @@
 	}
 	.avatars {
 		display: flex;
+        width: fit-content;
 	}
 	.avatar {
 		width: 30px;

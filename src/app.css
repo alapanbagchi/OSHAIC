@@ -59,5 +59,6 @@ a {
 }
 
 ::-webkit-scrollbar-track {
+	display: none;
 	background-color: var(--surface);
 }

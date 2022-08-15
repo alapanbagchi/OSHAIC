@@ -14,6 +14,7 @@
 	button {
 		display: flex;
 		gap: 10px;
+		white-space: nowrap;
 		background-color: var(--primary);
         border: 1px solid var(--onSurface);
         font-weight: 500;
