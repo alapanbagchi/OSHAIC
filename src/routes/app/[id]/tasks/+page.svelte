@@ -1,15 +1,15 @@
 <script lang="ts">
+	export let data: PageData;
 	import PageHeader from '$lib/components/PageInfo/PageHeader.svelte';
 	import TaskCard from '$lib/Tasks/TaskCard.svelte';
+	import type { PageData } from '@sveltejs/kit/types/internal';
 	const buttons = [
 		{
 			icon: '/icons/shared/plus.svg',
 			title: 'Add Task'
 		}
 	];
-	export let companies: string;
-	console.log(companies);
-	const tabs = ['Pending', 'Awaiting Review','Backlog', 'Completed'];
+	const tabs = ['Pending', 'Awaiting Review', 'Backlog', 'Completed'];
 	let dummy = [
 		'1',
 		'2',
@@ -31,7 +31,7 @@
 		'18',
 		'19',
 		'20',
-		"21"
+		'21'
 	];
 </script>
 
