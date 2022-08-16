@@ -33,7 +33,7 @@
 		margin-left: auto;
 		height: 100%;
 		align-items: center;
-		padding: 0 30px 0 10px;
+		padding: 0 50px 0 20px;
 		cursor: pointer;
 	}
 	.profile:hover {

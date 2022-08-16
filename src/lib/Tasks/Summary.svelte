@@ -1,15 +1,9 @@
 <script>
+	import Attachment from '$lib/components/shared/Attachment.svelte';
 	import { faker } from '@faker-js/faker';
-	import { onMount } from 'svelte';
-	$: height = 0;
-	onMount(() => {
-		height = document.getElementsByClassName('pageHeader')[0].clientHeight;
-	});
-
-	console.log(height);
 </script>
 
-<div style="height:calc(100vh - {height}px - 130px)" class="wrapper">
+<div class="wrapper">
 	<div class="header">
 		<div class="owner">
 			<p class="label">Started By</p>
@@ -32,6 +26,19 @@
 		<p class="title">Project Details</p>
 		<p class="content">{faker.lorem.paragraphs(20)}</p>
 	</div>
+	<div class="description">
+		<p class="title">Attachments</p>
+		<div class="attachments">
+			<Attachment />
+			<Attachment />
+			<Attachment />
+			<Attachment />
+			<Attachment />
+			<Attachment />
+			<Attachment />
+			<Attachment />
+		</div>
+	</div>
 </div>
 
 <style>
@@ -39,8 +46,6 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		overflow: auto;
-		flex-shrink: 0;
 	}
 	.header {
 		display: flex;
@@ -68,5 +73,14 @@
 	.description .content {
 		opacity: 0.7;
 		line-height: 30px;
+	}
+	.attachments{
+		width: 100%;
+		display: grid;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		overflow: scroll;
+		padding-top: 20px;
 	}
 </style>

@@ -54,6 +54,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			position: fixed;
+			bottom: -5px;
 		}
 		.header {
 			display: none;

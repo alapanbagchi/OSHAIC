@@ -49,6 +49,8 @@
 <style>
 	section {
 		padding: 25px 40px 0 40px;
+		height: calc(100vh - 80px);
+		overflow: auto;
 	}
 	.pageinfo {
 		width: 100%;
@@ -57,7 +59,6 @@
 	}
 	.tasks {
 		width: 100%;
-		height: calc(100vh - 80px - 120px);
 		display: grid;
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;

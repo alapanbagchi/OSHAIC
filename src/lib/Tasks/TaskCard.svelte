@@ -1,12 +1,14 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import Badge from '$lib/components/shared/Badge.svelte';
 	import { faker } from '@faker-js/faker';
 	let dummy = ['', '', '', '', '', ''];
-    
+	const link = (id:string) => {
+		return $page.url.pathname.split('/').slice(0,4).join('/') + '/' + id;
+	}
 </script>
 
-	<div class="wrapper">
+	<a href={link("1")} class="wrapper">
 		<div class="header">
 			<p class="title">Make a Design System</p>
 			<p class="description">
@@ -31,7 +33,7 @@
 				{/each}
 			</div>
 		</div>
-	</div>
+	</a>
 
 <style>
 	.wrapper {
