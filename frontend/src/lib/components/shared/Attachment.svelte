@@ -50,6 +50,8 @@
 	}
 	.size {
 		opacity: 0.5;
+        font-size: 0.9rem;
+        margin-top: 5px;
 	}
 
 </style>

@@ -51,6 +51,7 @@
 	}
 	.content {
 		width: 80%;
+		position: relative;
 		overflow: hidden;
 	}
 	@media only screen and (max-width: 1150px) {

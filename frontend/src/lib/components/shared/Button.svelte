@@ -5,7 +5,7 @@
 
 <button>
 	{#if icon != ''}
-		<img width="18px" src={icon} alt="" />
+		<img width="15px" src={icon} alt="" />
 	{/if}
 	{title}
 </button>
@@ -15,11 +15,11 @@
 		display: flex;
 		gap: 10px;
 		white-space: nowrap;
-		background-color: var(--primary);
+		background-color: var(--onBackground);
         border: 1px solid var(--onSurface);
         font-weight: 500;
 		align-items: center;
-		padding: 12px 20px;
+		padding: 12px 15px;
 		border-radius: 7px;
 		cursor: pointer;
 		color: #fff;
@@ -28,7 +28,7 @@
         transition: all 0.1s ease-in-out;
 	}
 	button:hover {
-		background-color: var(--primaryHover);
+		background-color: var(--primary);
         transition: all 0.3s ease-in-out;
 	}
     button:active{

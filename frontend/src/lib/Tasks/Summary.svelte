@@ -14,8 +14,8 @@
 			<p class="status">Pending</p>
 		</div>
 		<div class="tags">
-			<p class="label">Status</p>
-			<p class="tags">Design</p>
+			<p class="label">Progress</p>
+			<p class="tags">20% completed</p>
 		</div>
 		<div class="deadline">
 			<p class="label">Deadline:</p>
@@ -46,6 +46,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		margin-top:10px;
 	}
 	.header {
 		display: flex;

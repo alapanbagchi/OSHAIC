@@ -1,6 +1,5 @@
 <script>
 import PeopleCard from "./PeopleCard.svelte";
-
 </script>
 <div class="wrapper">
     <PeopleCard />
@@ -12,15 +11,13 @@ import PeopleCard from "./PeopleCard.svelte";
     <PeopleCard />
 </div>
 
-
 <style>
     .wrapper{
         width: 100%;
 		display: grid;
 		grid-column-gap: 30px;
-		grid-row-gap: 30px;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		overflow: scroll;
+		grid-row-gap: 5px;
+		grid-template-columns: 1fr;
 		padding-top: 20px;
     }
 </style>

@@ -15,27 +15,28 @@
 
 	const tab = (tab: CustomEvent) => {
 		dispatch('tab', tab.detail);
-	}
+	};
 </script>
 
 <section class="pageHeader">
 	<div class="header">
 		<div class="details">
-			<img
+			<!-- <img
 				on:click={navigateBack}
 				class="arrow {backIcon ? '' : 'hide'}"
-				width="30px"
-				height="30px"
+				height="35px"
 				src="/icons/shared/back.svg"
 				alt=""
-			/>
+			/> -->
 			<p class="title">{title}</p>
 		</div>
-		{#if buttons.length > 0}
-			{#each buttons as button}
-				<Button icon={button.icon} title={button.title} />
-			{/each}
-		{/if}
+		<div class="button_group">
+			{#if buttons.length > 0}
+				{#each buttons as button}
+					<Button icon={button.icon} title={button.title} />
+				{/each}
+			{/if}
+		</div>
 	</div>
 	{#if tabs.length > 0}
 		<div class="tabs">
@@ -53,6 +54,14 @@
 	.hide {
 		display: none;
 	}
+	.button_group{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		margin-top: 10px;
+		gap: 1rem;
+	}
 	.header {
 		width: 100%;
 		display: flex;
@@ -66,7 +75,6 @@
 	}
 	.details {
 		display: flex;
-		align-items: center;
 		gap: 10px;
 	}
 	.arrow {
@@ -81,8 +89,8 @@
 	.tabs {
 		margin-top: 20px;
 	}
-	@media screen and (max-width: 750px){
-		.header{
+	@media screen and (max-width: 750px) {
+		.header {
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 20px;

@@ -1,8 +1,6 @@
 <script lang="ts">
-	export let data: PageData;
 	import PageHeader from '$lib/components/PageInfo/PageHeader.svelte';
 	import TaskCard from '$lib/Tasks/TaskCard.svelte';
-	import type { PageData } from '@sveltejs/kit/types/internal';
 	const buttons = [
 		{
 			icon: '/icons/shared/plus.svg',
@@ -49,7 +47,7 @@
 <style>
 	section {
 		padding: 25px 40px 0 40px;
-		height: calc(100vh - 80px);
+		height: calc(100vh - 100px);
 		overflow: auto;
 	}
 	.pageinfo {
@@ -69,6 +67,7 @@
 	@media screen and (max-width: 768px) {
 		section {
 			padding: 20px 20px 0 20px;
+			height: calc(100vh - 160px);
 		}
 	}
 </style>
