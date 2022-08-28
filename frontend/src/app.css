@@ -9,8 +9,8 @@
 	--text: #ffffff;
 	--border: #333333;
 	--error: #CF6679;
-	--success: #21AB6C;
-	--primary: #5865f2;
+	--success: #039855;
+	--primary: #5066D7;
 	--primaryHover: #404bc1;
 	--primaryActive: #373780;
 }
@@ -19,7 +19,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Eudoxus Sans', 'Inter','serif';
+	font-family: 'Eudoxus Sans', 'Inter', 'serif';
 }
 
 body {
@@ -66,4 +66,16 @@ a {
 ::-webkit-scrollbar-track {
 	display: none;
 	background-color: var(--surface);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
 }

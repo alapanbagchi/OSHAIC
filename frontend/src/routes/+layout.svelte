@@ -1,4 +1,7 @@
 <script>
-    import '../app.css'
+	import Notification from '$lib/Notifications/Notification.svelte';
+	import '../app.css';
 </script>
-<slot></slot>
+
+	<slot />
+<Notification />
